@@ -136,7 +136,133 @@ State Machine Function Definitions
 /* Wait for ??? */
 static void UserApp1SM_Idle(void)
 {
-    
+     /* static u8 u8key=0;
+  static u32 u32Counter1 = 0;
+  static u32 u32Counter2 = 1;
+  static u32 u32Counter3 = 1000;
+  static u32 u32Counter4 = 100;
+  if(u32Counter2==1001)
+  {
+    u8key=1;
+    u32Counter4 = 100;
+  }
+  else if(u32Counter2 == 1|| u32Counter4 == 1000)
+  {
+    u8key=0;
+    u32Counter2 = 1;
+  }
+  switch(u8key)
+  {
+  case 0:u32Counter1++;
+      if(u32Counter1==u32Counter2)
+      { 
+        LedOn(RED);
+      }
+       else if(u32Counter1 == 1000)
+      {
+           LedOff(RED);
+           u32Counter1 = 0;
+           u32Counter2+=100;
+           u32Counter4-=1;
+  }break;
+  case 1:
+    u32Counter3--;
+    if(u32Counter3 == 0)
+    { 
+      LedOff(RED);
+      u32Counter3 = 1000;
+    }
+    else if (u32Counter3 == u32Counter4)
+    {   LedOn(RED);
+    u32Counter4 += 100;
+    u32Counter2 -= 100;
+     }break;
+  }
+}*/
+
+  u8 u8randCounter;
+u32 u32Counter1 = 0;
+u8randCounter=rand()%8;
+switch(u8randCounter)
+   {   
+      case 0:
+             LedOn(RED);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+             
+             LedOff(RED);break;
+      case 1:
+             LedOn(BLUE);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+            
+             LedOff(BLUE);break;
+      case 2:
+             LedOn(GREEN);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+            
+             LedOff(GREEN);break;
+      case 3:
+             LedOn(YELLOW);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+            
+             LedOff(YELLOW);break;
+      case 4:
+             LedOn(PURPLE);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+           
+             LedOff(PURPLE);break;
+      case 5:
+             LedOn(ORANGE);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+           
+             LedOff(ORANGE);break;
+      case 6:
+             LedOn(WHITE);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+           
+             LedOff(WHITE);break;
+      case 7:
+             LedOn(CYAN);
+             for(u32Counter1=0;u32Counter1<2000*500;u32Counter1++);
+           
+             LedOff(CYAN);break;
+   }  
+}
+ /* static u8 u8key=0;
+  static u32 u32Counter1 = 0;
+  static u32 u32Counter2 = 1024;
+  if(u32Counter2==2)
+  {
+    u8key=1;
+  }
+  else if(u32Counter2==1024)
+  { 
+    u8key=0;
+  }
+  switch(u8key)
+  {
+  case 0:u32Counter1++;
+      if(u32Counter1==u32Counter2)
+      LedOn(BLUE);//HEARTBEAT_ON();
+       else if(u32Counter1==2*u32Counter2)
+      {
+           LedOff(BLUE);
+           //HEARTBEAT_OFF();
+           u32Counter1 = 0;
+           u32Counter2/=2;
+  }break;
+  case 1:u32Counter1++;
+       if(u32Counter1==u32Counter2)
+         LedOn(BLUE);
+       //HEARTBEAT_ON();
+       else if(u32Counter1==2*u32Counter2)
+         {
+           LedOff(BLUE);
+           //HEARTBEAT_OFF();
+           u32Counter1 = 0;
+           u32Counter2*=2;
+  }break;
+ }
+}
 } /* end UserApp1SM_Idle() */
      
 #if 0
