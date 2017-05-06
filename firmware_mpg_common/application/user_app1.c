@@ -88,6 +88,27 @@ Promises:
 */
 void UserApp1Initialize(void)
 {
+
+//  LedToggle(PURPLE);
+    /*
+viod button_pressed(void)
+    {
+     static bool B_impressed[3]=FALSE;
+    if( IsButtonPressed(BUTTON) ==TRUE)   
+   {
+     if( IsButtonPressed(BUTTON0) ==FALES)   
+     
+     { LedOn(RED);
+     B_impressed[0]=TRUE;
+     }
+     else
+          { LedOff(RED);
+     B_impressed[0]=TRUE;
+    }
+    if(WasButtonPressed(BUTTON))
+    {if(B_impressed[1]==FALSE)}
+    }
+*/
   /* If good initialization, set state to Idle */
   if( 1 )
   {
@@ -134,8 +155,38 @@ State Machine Function Definitions
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 /* Wait for ??? */
+
 static void UserApp1SM_Idle(void)
 {
+   LedOff(WHITE);
+  LedOff(PURPLE);
+  LedOff(BLUE);
+  LedOff(CYAN);
+  LedOff(GREEN);
+  LedOff(YELLOW);
+  LedOff(ORANGE);
+  LedOff(RED);
+  
+  if( WasButtonPressed(BUTTON0)&&WasButtonPressed(BUTTON1)&&WasButtonPressed(BUTTON2)&&WasButtonPressed(BUTTON3) )
+{
+  /* The button is currently pressed, so make sure the LED is on */
+  LedOn(WHITE);
+}
+else
+{
+  /* The button is not pressed, so make sure the LED is off */
+  LedOff(WHITE);
+}
+  /*static u8_pwm_red = 0;
+  if(G_u32SystemTime1ms%1000 = 0)
+  {
+    LedToggle(PURPLE);
+  u8_pwm_red++;
+  if(u8_pwm_red>=20)
+    u8_pwm_red=0;
+  LedPWM(RED,led);
+  */
+  }
      /* static u8 u8key=0;
   static u32 u32Counter1 = 0;
   static u32 u32Counter2 = 1;
@@ -180,7 +231,8 @@ static void UserApp1SM_Idle(void)
   }
 }*/
 
-  u8 u8randCounter;
+/*  
+u8 u8randCounter;
 u32 u32Counter1 = 0;
 u8randCounter=rand()%8;
 switch(u8randCounter)

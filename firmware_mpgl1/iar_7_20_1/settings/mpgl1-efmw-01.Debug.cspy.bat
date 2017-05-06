@@ -19,6 +19,6 @@
 @REM 
 
 
-"E:\common\bin\cspybat" "E:\arm\bin\armproc.dll" "E:\arm\bin\armjlink.dll"  %1 --plugin "E:\arm\bin\armbat.dll" --device_macro "E:\arm\config\debugger\Atmel\SAM3U.dmac" --flash_loader "E:\arm\config\flashloader\Atmel\sam3u2c\sam3u2c-flash.board" --backend -B "--endian=little" "--cpu=Cortex-M3" "--fpu=None" "-p" "E:\arm\CONFIG\debugger\Atmel\ATSAM3U2C.ddf" "--semihosting" "--device=ATSAM3U2C" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=32" "--jlink_reset_strategy=0,0" "--drv_catch_exceptions=0x000" "--drv_swo_clock_setup=72000000,0,2000000" 
+"D:\IAR2\common\bin\cspybat" "D:\IAR2\arm\bin\armproc.dll" "D:\IAR2\arm\bin\armjlink.dll"  %1 --plugin "D:\IAR2\arm\bin\armbat.dll" --device_macro "D:\IAR2\arm\config\debugger\Atmel\SAM3U.dmac" --flash_loader "D:\IAR2\arm\config\flashloader\Atmel\sam3u2c\sam3u2c-flash.board" --backend -B "--endian=little" "--cpu=Cortex-M3" "--fpu=None" "-p" "D:\IAR2\arm\CONFIG\debugger\Atmel\ATSAM3U2C.ddf" "--semihosting" "--device=ATSAM3U2C" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=32" "--jlink_reset_strategy=0,0" "--drv_catch_exceptions=0x000" "--drv_swo_clock_setup=72000000,0,2000000" 
 
 
